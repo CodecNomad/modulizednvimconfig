@@ -31,6 +31,7 @@ return {
         lspconfig.ts_ls.setup{}
         lspconfig.pyright.setup{}
         lspconfig.eslint.setup{}
+        lspconfig.tailwindcss.setup{}
         lspconfig.rust_analyzer.setup{
             cmd = {
                 "rustup",
@@ -40,14 +41,16 @@ return {
             },
         }
 
-        local capabilities = vim.lsp.protocol.make_client_capabilities()
-        capabilities.textDocument.completion.completionItem.snippetSupport = true
+        local html_capabilities = vim.lsp.protocol.make_client_capabilities()
+        html_capabilities.textDocument.completion.completionItem.snippetSupport = true
         lspconfig.html.setup{
-            capabilities = capabilities,
+            capabilities = html_capabilities,
         }
 
-        require'lspconfig'.html.setup {
-            capabilities = capabilities,
+        local cssls_capabilities = vim.lsp.protocol.make_client_capabilities()
+        cssls_capabilities.textDocument.completion.completionItem.snippetSupport = true
+        lspconfig.cssls.setup {
+            capabilities = cssls_capabilities,
         }
     end
 }
