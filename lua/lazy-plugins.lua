@@ -1,9 +1,9 @@
 local plugins = {
-    require "lua/plugins/catppuccin",
-    require "lua/plugins/treesitter",
-    require "lua/plugins/lspconfig",
-    require "lua/plugins/nvimcmp",
-    require "lua/plugins/neotree",
+    require "plugins/catppuccin",
+    require "plugins/treesitter",
+    require "plugins/lspconfig",
+    require "plugins/nvimcmp",
+    require "plugins/neotree",
     "lambdalisue/vim-suda",
     "freddiehaddad/feline.nvim",
 }
