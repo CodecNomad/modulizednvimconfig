@@ -1,15 +1,28 @@
-vim.cmd([[
-    set expandtab
-    set tabstop=4
-    set softtabstop=4
-    set shiftwidth=4
-    set nu
-    set relativenumber
-    set cursorline
-    set autoindent
-    set smartindent
-]])
-
-vim.g.mapleader = " "
-vim.opt.termguicolors = true
-vim.api.nvim_set_option("clipboard", "unnamedplus")
+vim.opt.expandtab = true
+vim.opt.tabstop = 4
+vim.opt.softtabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.number = true
+vim.opt.relativenumber = true
+vim.opt.cursorline = true
+vim.opt.autoindent = true
+vim.opt.smartindent = true
+vim.g.mapleader = " " -- Leader key
+vim.opt.termguicolors = true -- Enable 24-bit RGB color in the TUI
+vim.opt.clipboard = "unnamedplus" -- Use system clipboard
+vim.g.have_nerd_font = true
+vim.opt.mouse = 'a' -- Enable mouse support
+vim.opt.showmode = false -- Hide mode (e.g., -- INSERT --)
+vim.opt.breakindent = true -- Enable break indent
+vim.opt.undofile = true -- Save undo history to an undo file
+vim.opt.ignorecase = true -- Ignore case in searches
+vim.opt.smartcase = true -- Use case-sensitive search if uppercase used
+vim.opt.signcolumn = 'yes' -- Always show the sign column
+vim.opt.updatetime = 250 -- Faster completion (default 4000ms)
+vim.opt.timeoutlen = 300 -- Shorter timeout for key sequences
+vim.opt.splitright = true -- Open vertical splits to the right
+vim.opt.splitbelow = true -- Open horizontal splits below
+vim.opt.list = true -- Show invisible characters
+vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' } -- Customize listchars
+vim.opt.inccommand = 'split' -- Show effects of substitute in split
+vim.opt.scrolloff = 10 -- Keep 10 lines visible when scrolling
